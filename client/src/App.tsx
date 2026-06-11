@@ -10,8 +10,8 @@ import LandingPage from "./features/landing-main/LandingPage";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import CosmicOracle from "./features/cosmic-oracle/CosmicOracle";
-import DomainCard from "./features/dimension-portal/DomainCard";
-import DomainExpandedModal from "./features/dimension-portal/DomainExpandedModal";
+import PortalPage from "./features/dimension-portal/PortalPage";
+import DomainExpandedModal from "./features/dimension-portal/components/DomainExpandedModal";
 import StorytellingSection from "./features/timeline/StorytellingSection";
 import TimelineSection from "./features/timeline/TimelineSection";
 import AdminPanel from "./features/clearance-dashboard/AdminPanel";
@@ -205,37 +205,10 @@ export default function App() {
 
           {/* PAGE 3: DOMAINS HUB (PORTALS) */}
           {route === "domains" && (
-            <motion.div
-              key="domains"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="space-y-12 text-center py-6"
-            >
-              <div className="space-y-2 max-w-2xl mx-auto">
-                <span className="font-mono text-xs uppercase text-gold-vintage tracking-widest block">
-                  The 12 gateways of consciousness
-                </span>
-                <h2 className="font-display font-medium text-3xl md:text-5xl tracking-widest text-slate-100 uppercase">
-                  Dimension Portals
-                </h2>
-                <p className="text-xs text-slate-400 max-w-md mx-auto leading-relaxed font-sans mt-2">
-                  Hover and step inside the portals to coordinate custom meditation practices, Hermetic scriptures, and atomic science calibrations.
-                </p>
-                <div className="w-16 h-[1.5px] bg-gold-vintage/50 mx-auto mt-4" />
-              </div>
-
-              {/* Spotlight Cards Grids */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 select-none">
-                {domains.map((dom) => (
-                  <DomainCard
-                    key={dom.id}
-                    domain={dom}
-                    onExplore={(d) => setSelectedDomain(d)}
-                  />
-                ))}
-              </div>
-            </motion.div>
+            <PortalPage
+              domains={domains}
+              onSelectDomain={(d) => setSelectedDomain(d)}
+            />
           )}
 
           {/* PAGE 4: FLOW OF EVENTS (TIMELINE) */}

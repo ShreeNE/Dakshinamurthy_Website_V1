@@ -56,6 +56,49 @@ git add .
 git commit -m "Describe your changes"
 git push origin main
 ```
+🔮 Working on Dimension Portals (Modular Development)
+To prevent your team from overwriting each other's code, the dimension portal feature has been split into isolated, individual files. Do not modify the main modal logic or global files unless explicitly instructed.
+
+Navigate to the info-cards directory:
+
+client/src/features/dimension-portal/info-cards/
+
+Open your assigned file based on your domain:
+
+PageOne.tsx — Meditation
+
+PageTwo.tsx — Yoga & Asana
+
+PageThree.tsx — Mindfulness
+
+PageFour.tsx — Sacred Geometry
+
+PageFive.tsx — Spiritual Science
+
+PageSix.tsx — Conscious Living
+
+PageSeven.tsx — Divine Energy & Qi
+
+PageEight.tsx — Sacred Scriptures
+
+PageNine.tsx — Ancient Wisdom
+
+PageTen.tsx — Universal Consciousness
+
+PageEleven.tsx — Astral Awareness & Dream
+
+PageTwelve.tsx — Cosmic Philosophy
+
+Make all your UI, layout, and content changes strictly inside your specific page file.
+
+Test your compilation before tracking your files by running npm run lint or npx tsc --noEmit inside the client folder.
+
+After making changes:
+```bash
+git add .
+git commit -m "feat: updated content for [Your Domain Name] page"
+git push origin main
+```
 
 If Push Is Rejected
 -------------------

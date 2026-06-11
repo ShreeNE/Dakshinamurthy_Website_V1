@@ -1,7 +1,7 @@
 import { useRef, useState, MouseEvent } from "react";
 import { motion } from "motion/react";
 import * as LucideIcons from "lucide-react";
-import { DomainContent } from "../../types/types";
+import { DomainContent } from "../../../types/types";
 
 interface DomainCardProps {
   domain: DomainContent;
