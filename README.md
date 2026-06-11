@@ -27,8 +27,8 @@ First Time Setup
 ----------------
 Clone the repository:
 ```bash
-git clone https://github.com/satwik-Adiga06/Dakshinamurthy_Website.git
-cd Dakshinamurthy_Website
+git clone https://github.com/ShreeNE/Dakshinamurthy_Website_V1.git
+cd Dakshinamurthy_Website_V1
 ```
 
 Install dependencies:
@@ -42,10 +42,6 @@ npm run dev
 ```
 Open the URL shown in the terminal.
 
-Project Structure
------------------
-Images must be stored inside:
-`public/ArticleImages/`
 
 Daily Workflow For Contributors
 -------------------------------
