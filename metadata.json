@@ -1,0 +1,6 @@
+{
+  "name": "Aethera Cosmic Platform",
+  "description": "An immersive cinematic spiritual cosmic platform for exploring consciousness, meditation, and ancient wisdom.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

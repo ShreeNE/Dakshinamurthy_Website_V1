@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", "Playfair Display", serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-cosmic-dark: #050505;
+  --color-cosmic-deep: #080b14;
+  --color-cosmic-slate: #0f172a;
+
+  --color-gold-vintage: #d4af37;
+  --color-gold-bright: #fbbf24;
+
+  --color-cosmic-purple: #c084fc;
+  --color-cosmic-indigo: #818cf8;
+  --color-cosmic-violet: #a855f7;
+}
+
+/* Custom visual utilities for luxury glassmorphism and Awwwards-style UI */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-gold {
+  background: rgba(8, 10, 20, 0.7);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glow-text-gold {
+  color: #d4af37;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+}
+
+.glow-text-purple {
+  color: #c084fc;
+  text-shadow: 0 0 15px rgba(192, 132, 252, 0.4);
+}
+
+.aurora-bg {
+  background: radial-gradient(circle at 50% -20%, rgba(168, 85, 247, 0.15), transparent 40%),
+    radial-gradient(circle at 10% 80%, rgba(129, 140, 248, 0.1), transparent 35%);
+}
+
+/* Base resets & scroll behavior */
+html,
+body {
+  background-color: transparent;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* Interactive spotlight hover background cursor styling */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(800px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(212, 175, 55, 0.06), transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.5);
+}
