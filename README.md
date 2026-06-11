@@ -93,12 +93,6 @@ Make all your UI, layout, and content changes strictly inside your specific page
 
 Test your compilation before tracking your files by running npm run lint or npx tsc --noEmit inside the client folder.
 
-After making changes:
-```bash
-git add .
-git commit -m "feat: updated content for [Your Domain Name] page"
-git push origin main
-```
 
 If Push Is Rejected
 -------------------
